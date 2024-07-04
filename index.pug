@@ -1,0 +1,97 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="icon", type="image/x-icon", href="images/title-image.svg")
+        link(rel="stylesheet", href="styles.css")
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
+    body
+        div.dashboard  
+            div.mobile-head
+                button.menu-button
+                    img.menu-button__image(src="images/menu-button.png", alt="menu-image")
+                div.mobile-user-info
+                    div.mobile-user-info__text
+                        div.mobile-user-info__user-name Evano 
+                        div.mobile-user-info__user-position Project Manager
+                    img.mobile-user-info__portrait-image(src="images/user-portrait.png", alt="user-portrait")
+            aside.side-menu
+                div(class="top-container side-menu__top-container")
+                    a(href="", class="title-box side-menu_title-box")
+                        img.title-box__image(src="images/title-image.png", alt="title-image")
+                        div.title-box__text Dashboard
+                        div.title-box__version v.01
+                        button.close-button
+                            img.close-button__image(src="images/close-button.png", alt="close-button")
+                    nav.buttons-list
+                        a.button(href="")
+                            img.button__image(src="images/dashboard-image.png", alt="dashboard-image")
+                            div.button__text Dashboard
+                        a.button(href="")
+                            img.button__image(src="images/product-image.png", alt="product-image")
+                            div.button__text Product 
+                            img.button__chevron(src="images/chevron.png", alt="chevron")
+                        a.button--active(href="")
+                            img.button__image(src="images/customers-image-active.png", alt="dashboard-image")
+                            div.button__text--active Customers 
+                            img.button__chevron--active(src="images/chevron-active.png", alt="chevron-active")
+                        a.button(href="")
+                            img.button__image(src="images/income-image.png", alt="income-image")
+                            div.button__text Income
+                            img.button__chevron(src="images/chevron.png", alt="chevron")
+                        a.button(href="")
+                            img.button__image(src="images/promote-image.png", alt="promote-image")
+                            div.button__text Promote 
+                            img.button__chevron(src="images/chevron.png", alt="chevron")
+                        a.button(href="")
+                            img.button__image(src="images/help-image.png", alt="help-image")
+                            div.button__text Help 
+                            img.button__chevron(src="images/chevron.png", alt="chevron")
+                footer(class="user-info side-menu__user-info")
+                    img.user-info__portrait-image(src="images/user-portrait.png", alt="user-portrait")
+                    div.user-info__text
+                        div.user-info__user-name Evano
+                        div.user-info__user-position Project Manager
+            main.main-content
+                header.main-content__greetings Hello Evano
+                    img.main-content__greetings-image(src="images/waving-hand.png", alt="waving-hand")
+                    | ,
+                div.customers-container
+                    header.customers-header
+                        div.customers-header__text
+                            div.customers-header__title All Customers
+                            a.customers-header__link(href="") Active Members
+                        div(class="search-form customers-header__search-form")
+                            button.search-form__button
+                                img.search-form__image(src="images/search-image.png", alt="search-image")
+                            input.search-form__text(type="text", placeholder="Search")
+                    table.customers-table
+                        thead 
+                            tr.customers-table__head
+                                th.customers-table__header-cell Customer Name
+                                th.customers-table__header-cell Company
+                                th.customers-table__header-cell Phone Number
+                                th.customers-table__header-cell Email
+                                th.customers-table__header-cell Country
+                                th.customers-table__header-cell-status Status
+                        tbody
+                            tr.customers-table__line
+                    footer(class="customers-footer customers-container__customers-footer")
+                       div.customers-container__showed-data 
+                            | Showing data
+                            div.customers-container__showing-from(id="showing-from")
+                            | to
+                            div.customers-container__showing-to(id="showing-to")
+                            | of 
+                            div.customers-container__entries(id="entries")
+                            | entries
+                       div.pagination
+                            ul.pagination__ul
+        script(src="./customers.js")
+        script(src="./index.js")
+
+    
